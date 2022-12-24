@@ -57,9 +57,9 @@ const remove = (data) => {
       ? node.left && node.right
         ? {...node, data: getNextLowest(node.right), right: removeNode(node.right, getNextLowest(node.right))}
         : node.right || node.left
-    : data < node.data
-      ? {...node, left: removeNode(node.left, data)}
-      : {...node, right: removeNode(node.right, data)}
+      : data < node.data
+        ? {...node, left: removeNode(node.left, data)}
+        : {...node, right: removeNode(node.right, data)}
 
   root = removeNode(root, data);
 }
