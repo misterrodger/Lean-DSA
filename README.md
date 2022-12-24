@@ -1,2 +1,3 @@
 # Lean-DSA
-Lean JS data structures and algorithms
+
+A collection of standard data structures and algorithms in lean Javascript
