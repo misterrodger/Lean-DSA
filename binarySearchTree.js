@@ -1,3 +1,5 @@
+const {ifThen} = require("./utils");
+
 let root;
 
 const node = (data) => ({data});
@@ -64,20 +66,74 @@ const remove = (data) => {
   root = removeNode(root, data);
 }
 
+const getMinHeight = (node) => !node
+  ? -1
+  : getMinHeight(node.left) < getMinHeight(node.right)
+    ? getMinHeight(node.left) + 1
+    : getMinHeight(node.right) + 1;
 
-add(0);
-add(1);
-add(2);
-add(5);
-add(3);
-add(13);
-add(8);
-add(21);
-console.dir(root,  {depth: null});
-console.log(findMin(root));
-console.log(findMax(root));
-console.log(find(13));
-console.log(isPresent(5));
-console.log(isPresent(6));
-remove(13);
-console.dir(root, {depth: null});
+const getMaxHeight = (node) => !node
+  ? -1
+  : getMaxHeight(node.left) > getMaxHeight(node.right)
+    ? getMaxHeight(node.left) + 1
+    : getMaxHeight(node.right) + 1;
+
+const isBalanced = () => getMaxHeight(root) - getMinHeight(root) <= 1;
+
+const inOrderTraversal = (root) => {
+  if (!root) return;
+
+  const result = [];
+
+  const traverse = (node) => {
+      node.left && traverse(node.left);
+      result.push(node.data);
+      node.right && traverse(node.right);
+    }
+  traverse(root);
+  return result;
+}
+
+const preOrderTraversal = (root) => {
+  if (!root) return;
+
+  const result = [];
+
+  const traverse = (node) => {
+    result.push(node.data);
+    node.left && traverse(node.left);
+    node.right && traverse(node.right);
+  }
+  traverse(root);
+  return result;
+}
+
+const postOrderTraversal = (root) => {
+  if (!root) return;
+
+  const result = [];
+
+  const traverse = (node) => {
+    node.left && traverse(node.left);
+    node.right && traverse(node.right);
+    result.push(node.data);
+  }
+  traverse(root);
+  return result;
+}
+
+const levelOrderTraversal = (root) => {
+  if (!root) return;
+
+  const traverseLevel = (temp, result = []) => {
+    if (!temp.length) return result;
+
+    const {data, left, right} = temp.shift();
+
+    return traverseLevel(
+      [...temp, ...(ifThen(left)), ...(ifThen(right))],
+      [...result, data]
+    )
+  }
+  return traverseLevel([root]);
+}

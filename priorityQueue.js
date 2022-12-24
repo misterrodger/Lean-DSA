@@ -11,7 +11,7 @@ const enqueueV1 = (item) => {
 
   priorityArray.map((each, index) => {
     const insertionPoint = priorityArray.lastIndexOf(each);
-    const isNoneFurther = priorityArray.slice(index + 1).every(every => every > each  && every > item[0])
+    const isNoneFurther = priorityArray.slice(index + 1).every(every => every > each && every > item[0])
 
     if (each <= item[0] && index === insertionPoint && isNoneFurther) {
       priorityQueue.splice(insertionPoint + 1, 0, item)
