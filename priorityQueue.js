@@ -5,7 +5,10 @@ const priorityQueue = [];
 const print = () => priorityQueue;
 
 const enqueueV1 = (item) => {
-  if (!priorityQueue.length) return priorityQueue.push(item);
+  if (!priorityQueue.length) {
+    priorityQueue.push(item);
+    return;
+  }
 
   const priorityArray = priorityQueue.map(each => each[0]);
 
@@ -20,7 +23,10 @@ const enqueueV1 = (item) => {
 };
 
 const enqueueV2 = (item) => {  // breaks earlier
-  if (!priorityQueue.length) return priorityQueue.push(item);
+  if (!priorityQueue.length) {
+    priorityQueue.push(item);
+    return;
+  }
 
   for (let i = 0; i < priorityQueue.length; i++) {
     const isNoneFurther = priorityQueue.slice(i + 1).every(([priority, _]) => priority > item[0]);
