@@ -11,7 +11,7 @@ const values = () => collection;
 
 const remove = (x) => collection.includes(x)
   ? collection.splice(collection.indexOf(x), 1)
-  : `sorry, collection doesn't have value ${x}`
+  : `sorry, collection doesn't have value ${x}`;
 
 const clear = () => collection.length = 0;
 
@@ -26,10 +26,10 @@ const difference = (arr1, arr2) => {
 
   const getUnique = (acc, curr) => !common.includes(curr) && !acc?.includes(curr)
     ? [...acc, curr]
-    : acc
+    : acc;
 
   return [...arr1, ...arr2].reduce(getUnique, []);
-}
+};
 
 const subset = (arr1, arr2) => arr1.every(each => arr2.includes(each));
 

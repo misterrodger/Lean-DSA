@@ -12,11 +12,11 @@ const length = () => stack.length;
 
 //
 console.log(stack);
-push(1)
-push(2)
-push(3)
+push(1);
+push(2);
+push(3);
 console.log(stack);
-console.log(peek())
+console.log(peek());
 console.log(pop());
 console.log(stack);
 console.log(length());

@@ -11,33 +11,33 @@ const enqueueV1 = (item) => {
 
   priorityArray.map((each, index) => {
     const insertionPoint = priorityArray.lastIndexOf(each);
-    const isNoneFurther = priorityArray.slice(index + 1).every(every => every > each && every > item[0])
+    const isNoneFurther = priorityArray.slice(index + 1).every(every => every > each && every > item[0]);
 
     if (each <= item[0] && index === insertionPoint && isNoneFurther) {
-      priorityQueue.splice(insertionPoint + 1, 0, item)
+      priorityQueue.splice(insertionPoint + 1, 0, item);
     }
-  })
-}
+  });
+};
 
 const enqueueV2 = (item) => {  // breaks earlier
   if (!priorityQueue.length) return priorityQueue.push(item);
 
   for (let i = 0; i < priorityQueue.length; i++) {
     const isNoneFurther = priorityQueue.slice(i + 1).every(([priority, _]) => priority > item[0]);
-    
+
     if (priorityQueue[i][0] <= item[0] && isNoneFurther) {
       priorityQueue.splice(i + 1, 0, item);
       break;
     }
   }
-}
+};
 
-enqueueV2([1, "cat"])
-enqueueV2([3, "dog"])
-enqueueV2([2, "cow"])
-enqueueV2([2, "sheep"])
-enqueueV2([4, "fish"])
-enqueueV2([4, "bird"])
-enqueueV2([1, "lizard"])
-enqueueV2([4, "buffalo"])
+enqueueV2([1, "cat"]);
+enqueueV2([3, "dog"]);
+enqueueV2([2, "cow"]);
+enqueueV2([2, "sheep"]);
+enqueueV2([4, "fish"]);
+enqueueV2([4, "bird"]);
+enqueueV2([1, "lizard"]);
+enqueueV2([4, "buffalo"]);
 console.log(print());
