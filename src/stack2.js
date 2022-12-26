@@ -18,14 +18,3 @@ const pop = () => {
 const peek = () => stack[count - 1];
 
 const length = () => count;
-
-//
-console.log(stack);
-push(1);
-push(2);
-push(3);
-console.log(stack);
-console.log(peek());
-console.log(pop());
-console.log(stack);
-console.log(length());

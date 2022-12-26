@@ -32,9 +32,3 @@ const difference = (arr1, arr2) => {
 };
 
 const subset = (arr1, arr2) => arr1.every(each => arr2.includes(each));
-
-//
-console.log(union(collection, collection2));
-console.log(intersection(collection, collection2));
-console.log(difference(collection, collection2));
-console.log(subset(collection2, collection));

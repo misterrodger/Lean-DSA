@@ -37,13 +37,3 @@ const enqueueV2 = (item) => {  // breaks earlier
     }
   }
 };
-
-enqueueV2([1, "cat"]);
-enqueueV2([3, "dog"]);
-enqueueV2([2, "cow"]);
-enqueueV2([2, "sheep"]);
-enqueueV2([4, "fish"]);
-enqueueV2([4, "bird"]);
-enqueueV2([1, "lizard"]);
-enqueueV2([4, "buffalo"]);
-console.log(print());

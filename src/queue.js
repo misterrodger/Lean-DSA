@@ -15,18 +15,3 @@ const front = () => queue[0]
 const size = () => queue.length;
 
 const isEmpty = () => !Boolean(queue.length);
-
-//
-console.log(print());
-console.log(isEmpty());
-console.log(dequeue());
-console.log(front());
-enqueue("a");
-enqueue("b");
-enqueue("c");
-console.log(print());
-console.log(isEmpty());
-console.log(size());
-console.log(front());
-console.log(dequeue());
-console.log(print());
