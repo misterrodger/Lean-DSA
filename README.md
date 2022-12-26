@@ -1,6 +1,6 @@
 # Lean-DSA
 
-A collection of standard data structures and algorithms in lean Javascript.
+A collection of standard data structures and algorithms in lean Javascript. (Work in progress)
 
 This is not production-grade code.  The idea is to aid understanding by exposing the underlying logic in a reasonably clear way.
 
