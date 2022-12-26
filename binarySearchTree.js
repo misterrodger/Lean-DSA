@@ -1,3 +1,9 @@
+const {
+  traverseLeft,
+  traverseRight,
+  pushData,
+  traversalOperator
+} = require("./helpers/traversalHelpers");
 const {ifThen} = require("./utils");
 
 let root;
@@ -83,51 +89,13 @@ const getMaxHeight = (root) => !root
 
 const isBalanced = () => getMaxHeight(root) - getMinHeight(root) <= 1;
 
-const inOrderTraversal = (root) => {
-  if (!root) return;
+const inOrderTraversal = (root) => traversalOperator(traverseLeft, pushData, traverseRight)(root);
 
-  const result = [];
+const preOrderTraversal = (root) => traversalOperator(pushData, traverseLeft, traverseRight)(root);
 
-  const traverse = ({data, left, right}) => {
-    left && traverse(left);
-    result.push(data);
-    right && traverse(right);
-  };
-  traverse(root);
-  return result;
-};
-
-const preOrderTraversal = (root) => {
-  if (!root) return;
-
-  const result = [];
-
-  const traverse = ({data, left, right}) => {
-    result.push(data);
-    left && traverse(left);
-    right && traverse(right);
-  };
-  traverse(root);
-  return result;
-};
-
-const postOrderTraversal = (root) => {
-  if (!root) return;
-
-  const result = [];
-
-  const traverse = ({data, left, right}) => {
-    left && traverse(left);
-    right && traverse(right);
-    result.push(data);
-  };
-  traverse(root);
-  return result;
-};
+const postOrderTraversal = (root) => traversalOperator(traverseLeft, traverseRight, pushData)(root);
 
 const levelOrderTraversal = (root) => {
-  if (!root) return;
-
   const traverseLevel = (temp, result = []) => {
     if (!temp.length) return result;
 
