@@ -37,3 +37,23 @@ const enqueueV2 = (item) => {  // breaks earlier
     }
   }
 };
+
+
+// examples
+enqueueV2([1, "A"]);
+enqueueV2([2, "C"]);
+enqueueV2([3, "E"]);
+enqueueV2([2, "D"]);
+enqueueV2([1, "B"]);
+enqueueV2([3, "F"]);
+enqueueV2([4, "G"]);
+console.log(priorityQueue);
+// [
+//   [ 1, 'A' ],
+//   [ 1, 'B' ],
+//   [ 2, 'C' ],
+//   [ 2, 'D' ],
+//   [ 3, 'E' ],
+//   [ 3, 'F' ],
+//   [ 4, 'G' ]
+// ]
