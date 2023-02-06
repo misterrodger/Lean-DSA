@@ -35,23 +35,34 @@ This is not production-grade code.  The idea is to aid understanding by exposing
 * subset
 
 #### [Priority Queue](https://github.com/misterrodger/Lean-DSA/blob/main/src/priorityQueue.js)
+
 * same as queue plus enqueue considering priority
 
 #### [Queue](https://github.com/misterrodger/Lean-DSA/blob/main/src/queue.js)
+
 * print
 * enqueue
 * dequeue
 * front
 * size
 * isEmpty
+
 #### [Stack using native array](https://github.com/misterrodger/Lean-DSA/blob/main/src/stack1.js)
+
 * push
 * pop
 * peek
 * length
 
 #### [Stack not using native array](https://github.com/misterrodger/Lean-DSA/blob/main/src/stack2.js)
+
 * push
 * pop
 * peek
 * length
+
+#### [Deep clone](https://github.com/misterrodger/Lean-DSA/blob/main/utils/deepClone.js)
+
+#### [Deep clone2](https://github.com/misterrodger/Lean-DSA/blob/main/utils/deepClone2.js)
+
+#### [Deep clone3](https://github.com/misterrodger/Lean-DSA/blob/main/utils/deepClone3.js)
