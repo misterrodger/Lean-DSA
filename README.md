@@ -63,11 +63,6 @@ This is not production-grade code.  The idea is to aid understanding by exposing
 
 #### [Deep clone](https://github.com/misterrodger/Lean-DSA/blob/main/utils/deepClone.js)
 
-* imperative approach
-
-#### [Deep clone2](https://github.com/misterrodger/Lean-DSA/blob/main/utils/deepClone2.js)
-
-* reduce everything
-#### [Deep clone3](https://github.com/misterrodger/Lean-DSA/blob/main/utils/deepClone3.js)
-
-* map arrays, reduce objects
+* v1 - imperative approach
+* v2 - reduce everything
+* v3 - map arrays, reduce objects
