@@ -4,7 +4,7 @@ A collection of standard data structures and algorithms in lean Javascript. (Wor
 
 This is not production-grade code.  The idea is to aid understanding by exposing the underlying logic in a reasonably clear way.
 
-#### [Binary Search Tree](https://github.com/misterrodger/Lean-DSA/blob/main/src/binarySearchTree.js)
+#### [Binary Search Tree](https://github.com/misterrodger/Lean-DSA/blob/main/src/dataStructures/binarySearchTree.js)
 
 * add
 * findMin/findMax
@@ -21,7 +21,7 @@ This is not production-grade code.  The idea is to aid understanding by exposing
 * Breadth-first search
   * levelOrderTraversal
 
-#### [Set](https://github.com/misterrodger/Lean-DSA/blob/main/src/set.js)
+#### [Set](https://github.com/misterrodger/Lean-DSA/blob/main/src/dataStructures/set.js)
 
 * add
 * has
@@ -34,11 +34,11 @@ This is not production-grade code.  The idea is to aid understanding by exposing
 * difference
 * subset
 
-#### [Priority Queue](https://github.com/misterrodger/Lean-DSA/blob/main/src/priorityQueue.js)
+#### [Priority Queue](https://github.com/misterrodger/Lean-DSA/blob/main/src/dataStructures/priorityQueue.js)
 
 * same as queue plus enqueue considering priority
 
-#### [Queue](https://github.com/misterrodger/Lean-DSA/blob/main/src/queue.js)
+#### [Queue](https://github.com/misterrodger/Lean-DSA/blob/main/src/dataStructures/queue.js)
 
 * print
 * enqueue
@@ -47,22 +47,26 @@ This is not production-grade code.  The idea is to aid understanding by exposing
 * size
 * isEmpty
 
-#### [Stack using native array](https://github.com/misterrodger/Lean-DSA/blob/main/src/stack1.js)
+#### [Stack using native array](https://github.com/misterrodger/Lean-DSA/blob/main/src/dataStructures/stack1.js)
 
 * push
 * pop
 * peek
 * length
 
-#### [Stack not using native array](https://github.com/misterrodger/Lean-DSA/blob/main/src/stack2.js)
+#### [Stack not using native array](https://github.com/misterrodger/Lean-DSA/blob/main/src/dataStructures/stack2.js)
 
 * push
 * pop
 * peek
 * length
 
-#### [Deep clone](https://github.com/misterrodger/Lean-DSA/blob/main/utils/deepClone.js)
+#### [Deep clone](https://github.com/misterrodger/Lean-DSA/blob/main/src/utils/deepClone.js)
 
 * v1 - imperative approach
 * v2 - reduce everything
 * v3 - map arrays, reduce objects
+
+#### [Algorithms WIP](https://github.com/misterrodger/Lean-DSA/tree/main/src/algorithms)
+
+* [arrays and hashing](https://github.com/misterrodger/Lean-DSA/tree/main/src/algorithms/arraysAndHashing)
