@@ -10,7 +10,6 @@ const peek = () => stack[stack.length - 1];
 
 const length = () => stack.length;
 
-
 // examples
 push(1);
 push(2);

@@ -1,0 +1,29 @@
+{
+  "type": "module",
+  "name": "lean-dsa",
+  "version": "1.0.0",
+  "description": "A collection of standard data structures and algorithms in lean Javascript. (Work in progress)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src/**",
+    "audit": "better-npm-audit audit --level=high"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/misterrodger/Lean-DSA.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/misterrodger/Lean-DSA/issues"
+  },
+  "homepage": "https://github.com/misterrodger/Lean-DSA#readme",
+  "devDependencies": {
+    "better-npm-audit": "^3.7.3",
+    "eslint": "^8.50.0",
+    "eslint-plugin-functional": "^6.0.0",
+    "eslint-plugin-immutable": "^1.0.0"
+  }
+}

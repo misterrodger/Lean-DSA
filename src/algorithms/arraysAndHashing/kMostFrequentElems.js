@@ -1,27 +1,28 @@
-let lookup = {}
+let lookup = {};
 
 const logFrequency = (arr) => arr.forEach(each => {
-  const getKey = lookup[each]
+  // eslint-disable-next-line prefer-destructuring
+  const getKey = lookup[each];
   if (getKey == undefined) {
-    lookup[each] = 1
+    lookup[each] = 1;
   }
   else {
-    lookup[each] += 1
+    lookup[each] += 1;
   }
-})
+});
 
 const getKFrequent = () => {
-  return Object.entries(lookup).sort((a, b) => b[1] - a[1])
-}
+  return Object.entries(lookup).sort((a, b) => b[1] - a[1]);
+};
 
 function topKFrequent(arr, k) {
-  lookup = {}
-  logFrequency(arr) 
+  lookup = {};
+  logFrequency(arr);
 
-  return getKFrequent().slice(0, k).map(([result]) => Number(result))
+  return getKFrequent().slice(0, k).map(([result]) => Number(result));
 }
 
-console.log(topKFrequent([1,1,1,2, 2, 2, 2,3], 2))
+console.log(topKFrequent([1,1,1,2, 2, 2, 2,3], 2));
 console.log(topKFrequent([-1, -1], 1));
 
 // TODO - instead of the sort step:

@@ -1,39 +1,40 @@
+/* eslint-disable no-console */
 // nested for-loops
-function twoSum(arr, target) {
-  const result = []
+function twoSum(arr, target, other) {
+  const result = [];
+  const {_, rest} = arr;
+  console.log(rest);
 
   for (let x = 0; x < arr.length - 1; x++) {
     for (let y = x + 1; y < arr.length; y++) {
-      console.log({
-        x,
-        y
-      })
+      const myFunc = () => console.log('');
+      myFunc();
       if (arr[x] + arr[y] === target) {
-        result.push(arr.indexOf(arr[x]))
-        result.push(arr.lastIndexOf(arr[y]))
+        result.push(arr.indexOf(arr[x]));
+        result.push(arr.lastIndexOf(arr[y]));
       }
     }
   }
-  return result
+  return result;
 }
 
 // nested JS arr methods
 function twoSum2(arr,target) {
-  let result
+  let result;
 
   arr.map((each, eachIndex) => {
     arr.slice(eachIndex + 1).map((every, everyIndex) => {
-      console.log(each, every)
+      console.log(each, every);
       if (each + every === target) {
         result = [eachIndex,
-          eachIndex + 1 + everyIndex]
+          eachIndex + 1 + everyIndex];
       }
-    })
-  })
-  return result
+    });
+  });
+  return result;
 }
 
-
+console.log();
 const input = [
   8099179,
   4935679,
@@ -803,20 +804,20 @@ const input = [
   2466681,
   6437149,
   -156423
-]
+];
 // console.log(twoSum2(input, 13034858))
 
 // tried to use nested recursion - returns the target when found but not the indexes, you need to keep the indexes
-function twoSum3(arr, target,) {
-  let result
+function twoSum3(arr, target) {
+  let result;
 
   const innerLoop = (arr2) => {
     return arr[0] + arr2[0] === target
       ? arr[0] + arr2[0]
-      : innerLoop(arr2.slice(1))
-  }
-  
-  return innerLoop(arr.slice(1)) ?? twoSum3(arr.slice1)
+      : innerLoop(arr2.slice(1));
+  };
+
+  return innerLoop(arr.slice(1)) ?? twoSum3(arr.slice1);
 }
 
 // pass back the indexes on recursion, this works:
@@ -826,32 +827,31 @@ function twoSum4(arr, target, arrIndex = 0) {
       ? undefined
       :  arr[0] + arr2[0] === target
         ? [arrIndex, arr2Index]
-        : innerLoop(arr2.slice(1), arr2Index + 1)
-  }
-  
+        : innerLoop(arr2.slice(1), arr2Index + 1);
+  };
+
   return arr.length <= 1
     ? undefined
-    : innerLoop(arr.slice(1), arrIndex + 1) ?? twoSum4(arr.slice(1), target, arrIndex + 1)
+    : innerLoop(arr.slice(1), arrIndex + 1) ?? twoSum4(arr.slice(1), target, arrIndex + 1);
 }
 
 // console.log(twoSum3([2, 11, 7, 15], 9))
 // console.log(twoSum4([3, 11, 2, 7, 15], 9))
 // console.log(twoSum4(input, 13034858))
 
-
 // hash map - better
 
 function twoSum5(arr, target) {
-  const hashMap = {}
+  const hashMap = {};
 
   for (let i = 0; i < arr.length; i++) {
-    const complement = target - arr[i]
+    const complement = target - arr[i];
     if (hashMap[complement] !== undefined) {
-      return [hashMap[complement], i]
+      return [hashMap[complement], i];
     }
-    hashMap[arr[i]] = i
+    hashMap[arr[i]] = i;
   }
 }
 
-console.log(twoSum5([3, 11, 2, 7, 15], 9))
-console.log(twoSum5([2, 7, 11, 15], 9))
+console.log(twoSum5([3, 11, 2, 7, 15], 9));
+console.log(twoSum5([2, 7, 11, 15], 9));

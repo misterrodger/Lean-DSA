@@ -6,16 +6,15 @@ const enqueue = (item) => queue.push(item);
 
 const dequeue = () => queue[0]
   ? queue.shift()
-  : "sorry queue has no items to dequeue";
+  : 'sorry queue has no items to dequeue';
 
 const front = () => queue[0]
   ? queue[0]
-  : "sorry queue has no items from which to show front item";
+  : 'sorry queue has no items from which to show front item';
 
 const size = () => queue.length;
 
-const isEmpty = () => !Boolean(queue.length);
-
+const isEmpty = () => !queue.length;
 
 // examples
 enqueue(1);

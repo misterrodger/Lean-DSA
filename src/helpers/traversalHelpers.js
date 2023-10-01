@@ -18,7 +18,7 @@ const traversalOperator = (...funcs) => (root) => {
   return traversalResult;
 };
 
-module.exports = {
+export {
   traverseLeft,
   traverseRight,
   pushData,

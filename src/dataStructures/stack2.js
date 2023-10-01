@@ -9,6 +9,7 @@ const push = (item) => {
 };
 
 const pop = () => {
+  // eslint-disable-next-line prefer-destructuring
   const result = stack[count - 1];
   delete stack[count - 1];
   count -= 1;

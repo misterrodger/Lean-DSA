@@ -1,10 +1,10 @@
-const {
+import { ifThen } from '../utils/index.js';
+import {
   traverseLeft,
   traverseRight,
   pushData,
   traversalOperator
-} = require("../../helpers/traversalHelpers");
-const {ifThen} = require("../../utils");
+} from '../helpers/traversalHelpers.js';
 
 let root;
 
@@ -108,7 +108,6 @@ const levelOrderTraversal = (root) => {
   };
   return traverseLevel([root]);
 };
-
 
 // examples
 add(5);

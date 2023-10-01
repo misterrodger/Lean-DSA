@@ -6,9 +6,8 @@ const deepClone = (input) => {
 
   Object.entries(input).forEach(([key, value]) => container[key] = deepClone(value));
 
-  return container
-}
-
+  return container;
+};
 
 // v2 reduce everything
 const getContainer = (input) => Array.isArray(input) ? [] : {};
@@ -18,14 +17,15 @@ const nestedObjectReducer = (acc, [key, value]) => {
   return acc;
 };
 
-const deepClone2 = (input) => typeof input !== 'object' || input === null
-  ? input
-  : Object.entries(input)
-    .reduce(
-      nestedObjectReducer,
-      getContainer(input)
+function deepClone2(input) {
+  return typeof input !== 'object' || input === null
+    ? input
+    : Object.entries(input)
+      .reduce(
+        nestedObjectReducer,
+        getContainer(input)
       );
-
+}
 
 // v3 map arrays, reduce objects
 const deepClone3 = (input) => typeof input !== 'object' || input === null
@@ -35,9 +35,8 @@ const deepClone3 = (input) => typeof input !== 'object' || input === null
     : Object.entries(input)
       .reduce((acc, [key, value]) => ({...acc, [key]: deepClone3(value)}), {});
 
-
-module.exports = {
+export {
   deepClone,
   deepClone2,
   deepClone3
-}
+};

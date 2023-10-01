@@ -1,5 +1,5 @@
-const collection = ["item1", "item2", "item3"];
-const collection2 = ["item2", "item4"];
+const collection = ['item1', 'item2', 'item3'];
+const collection2 = ['item2', 'item4'];
 
 const has = (x) => collection.includes(x);
 
@@ -32,7 +32,6 @@ const difference = (arr1, arr2) => {
 };
 
 const subset = (arr1, arr2) => arr1.every(each => arr2.includes(each));
-
 
 // examples
 console.log(union(collection, collection2));  // [ 'item1', 'item2', 'item3', 'item4' ]
