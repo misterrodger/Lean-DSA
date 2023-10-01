@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "allowJs": true, // Allow JavaScript files
+    "checkJs": false, // Do not type-check JavaScript files
+    "noEmit": true, // Do not emit outputs (you're using TypeScript for type-checking only)
+    "target": "ESNext"
+  },
+  "include": [
+    "src/**/*.js" // Point to your source files
+  ]
+}

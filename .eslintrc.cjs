@@ -5,7 +5,9 @@ module.exports = {
     'es2021': true
   },
   'extends': [
-    'eslint:recommended'
+    'eslint:recommended',
+    // 'plugin:functional/recommended',  // not for this project
+    'plugin:functional/external-typescript-recommended'
   ],
   'overrides': [
     {
@@ -20,11 +22,16 @@ module.exports = {
       }
     }
   ],
+  'parser': '@typescript-eslint/parser',
   'parserOptions': {
     'ecmaVersion': 'latest',
-    'sourceType': 'module'
+    'sourceType': 'module',
+    'project': './tsconfig.json'
   },
-  'plugins': ['functional', 'immutable'],
+  'plugins': [
+    '@typescript-eslint',
+    'functional'
+  ],
   'rules': {
     'indent': ['warn', 2],
     'linebreak-style': ['error', 'unix'],
@@ -36,7 +43,6 @@ module.exports = {
     'no-multiple-empty-lines': ['error', { 'max': 1, 'maxEOF': 1 }],
     'eol-last': ['error', 'always'],
     'no-console': 'warn',
-    // FP
     'no-loop-func': 'error',
     'prefer-arrow-callback': 'error',
     'prefer-const': 'error',
@@ -47,15 +53,14 @@ module.exports = {
       object: true
     }, { enforceForRenamedProperties: true }],
     'no-var': 'error',
+    'no-param-reassign': 'error',
+    'no-undef': 'error',
     'no-use-before-define': ['error', { functions: false }],
     'arrow-spacing': ['error', { before: true, after: true }],
     'no-restricted-syntax': ['error', 'SwitchStatement'],
-    // concise
     'object-shorthand': ['error', 'always'],
     'no-useless-return': 'error',
-    'no-useless-constructor': 'error',
     'no-useless-computed-key': 'error',
-    'no-useless-rename': 'error',
-    'no-dupe-class-members': 'error'
+    'no-useless-rename': 'error'
   }
 };
