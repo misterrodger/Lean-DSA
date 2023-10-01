@@ -3,8 +3,8 @@ const {
   traverseRight,
   pushData,
   traversalOperator
-} = require("../helpers/traversalHelpers");
-const {ifThen} = require("../utils");
+} = require("../../helpers/traversalHelpers");
+const {ifThen} = require("../../utils");
 
 let root;
 
