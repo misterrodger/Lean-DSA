@@ -1,3 +1,5 @@
+[![Ceasefire Now](https://badge.techforpalestine.org/default)](https://techforpalestine.org/learn-more)
+
 # Lean-DSA
 
 A collection of standard data structures and algorithms in lean Javascript. (Work in progress)
