@@ -1,8 +1,8 @@
 # Lean-DSA
 
-A collection of standard data structures and algorithms in lean Javascript. (Work in progress)
+A collection of standard data structures and algorithms in concise Javascript. (Work in progress)
 
-This is not production-grade code.  The idea is to aid understanding by exposing the underlying logic in a reasonably clear way.
+This is not production-grade code.  The idea is to aid understanding by exposing the underlying logic in a simple and clear way.
 
 #### [Binary Search Tree](https://github.com/misterrodger/Lean-DSA/blob/main/src/dataStructures/binarySearchTree.js)
 
