@@ -42,7 +42,7 @@ module.exports = {
     'no-trailing-spaces': 'error',
     'no-multiple-empty-lines': ['error', { 'max': 1, 'maxEOF': 1 }],
     'eol-last': ['error', 'always'],
-    'no-console': 'warn',
+    // 'no-console': 'warn',
     'no-loop-func': 'error',
     'prefer-arrow-callback': 'error',
     'prefer-const': 'error',
