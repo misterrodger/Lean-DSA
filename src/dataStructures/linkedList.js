@@ -74,7 +74,38 @@ class LinkedList {
     this.size++
   }
 
-  // TODO insert, delete, reverse
+  delete(position) {
+    if (position === 0) {
+      this.head = this.head.next;
+    } else {
+      let current = this.head;
+      let previous;
+      let index = 0;
+  
+      while (index < position) {
+        previous = current;
+        current = current.next;
+        index++
+      }
+      previous.next = current.next;
+    }
+  }
+
+  reverse() {
+    let current = this.head;
+    let previous
+    let next
+
+    while (current) {
+      next = current.next
+      current.next = previous;
+      previous = current
+      current = next;
+    }
+
+    this.tail = this.head;
+    this.head = previous
+  }
 }
 
 const list = new LinkedList();
@@ -85,3 +116,8 @@ list.append(3);
 list.print();
 list.insert(42, 2);
 list.print()
+list.delete(1)
+list.print()
+list.reverse()
+list.print()
+
