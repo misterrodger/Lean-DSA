@@ -11,7 +11,7 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "program": "${workspaceFolder}/src/algorithms/practice/marsRover.js"
+      "program": "${workspaceFolder}/src/algorithms/8-backtracking/subsets.js"
     }
   ]
 }

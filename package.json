@@ -5,7 +5,7 @@
   "description": "A collection of standard data structures and algorithms in lean Javascript. (Work in progress)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "lint": "eslint src/**",
     "audit": "better-npm-audit audit --level=high"
   },
@@ -21,11 +21,15 @@
   },
   "homepage": "https://github.com/misterrodger/Lean-DSA#readme",
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.7.3",
-    "@typescript-eslint/parser": "^6.7.3",
-    "better-npm-audit": "^3.7.3",
-    "eslint": "^8.50.0",
-    "eslint-plugin-functional": "^6.0.0",
-    "typescript": "^5.2.2"
+    "@types/jest": "30",
+    "@types/node": "24",
+    "@typescript-eslint/eslint-plugin": "6",
+    "@typescript-eslint/parser": "6",
+    "better-npm-audit": "3",
+    "eslint": "8",
+    "eslint-plugin-functional": "6",
+    "jest": "30",
+    "ts-jest": "^29",
+    "typescript": "^5"
   }
 }
